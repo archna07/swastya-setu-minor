@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Swastya Setu – Smart Healthcare Assistance Platform
 > **Full-Stack Academic & Decision-Support Healthcare Web Platform**
 
@@ -330,3 +331,6 @@ The stack provisions:
 - **Leaflet.js**: BSD 2-Clause License.
 - **Bootstrap 5**: MIT License.
 - **FontAwesome Free**: SIL OFL 1.1 / MIT License.
+=======
+# swastya-setu-minor
+>>>>>>> a1b62de0c2b3f245377ad3b83256eb99f5726f2d
