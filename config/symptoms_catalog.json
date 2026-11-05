@@ -1,0 +1,439 @@
+{
+  "version": "2.1.0",
+  "disclaimer": "IMPORTANT CLINICAL NOTICE: Swastya Setu AI Disease Prediction is an educational prototype and decision-support demonstration tool. It does NOT provide clinical diagnosis, medical validation, or prescription advice. Always seek immediate professional medical assessment from qualified healthcare providers.",
+  "emergency_symptom_ids": [
+    "chest_pain",
+    "shortness_of_breath",
+    "stiff_neck",
+    "confusion"
+  ],
+  "symptoms": [
+    {
+      "id": "cough",
+      "label": "Cough",
+      "category": "Respiratory",
+      "is_emergency": false
+    },
+    {
+      "id": "shortness_of_breath",
+      "label": "Shortness of Breath",
+      "category": "Respiratory",
+      "is_emergency": true
+    },
+    {
+      "id": "chest_pain",
+      "label": "Chest Pain",
+      "category": "Respiratory",
+      "is_emergency": true
+    },
+    {
+      "id": "sore_throat",
+      "label": "Sore Throat",
+      "category": "Respiratory",
+      "is_emergency": false
+    },
+    {
+      "id": "runny_nose",
+      "label": "Runny Nose",
+      "category": "Respiratory",
+      "is_emergency": false
+    },
+    {
+      "id": "sneezing",
+      "label": "Sneezing",
+      "category": "Respiratory",
+      "is_emergency": false
+    },
+    {
+      "id": "wheezing",
+      "label": "Wheezing / Whistling Breath",
+      "category": "Respiratory",
+      "is_emergency": false
+    },
+    {
+      "id": "loss_of_smell",
+      "label": "Loss of Smell / Taste",
+      "category": "Respiratory",
+      "is_emergency": false
+    },
+    {
+      "id": "fever",
+      "label": "Mild / Moderate Fever",
+      "category": "Systemic & Fever",
+      "is_emergency": false
+    },
+    {
+      "id": "high_fever",
+      "label": "High Fever (> 102°F)",
+      "category": "Systemic & Fever",
+      "is_emergency": false
+    },
+    {
+      "id": "chills",
+      "label": "Chills & Shivering",
+      "category": "Systemic & Fever",
+      "is_emergency": false
+    },
+    {
+      "id": "sweating",
+      "label": "Excessive Sweating",
+      "category": "Systemic & Fever",
+      "is_emergency": false
+    },
+    {
+      "id": "fatigue",
+      "label": "Fatigue & Weakness",
+      "category": "Systemic & Fever",
+      "is_emergency": false
+    },
+    {
+      "id": "body_ache",
+      "label": "Generalized Body / Muscle Ache",
+      "category": "Systemic & Fever",
+      "is_emergency": false
+    },
+    {
+      "id": "nausea",
+      "label": "Nausea",
+      "category": "Gastrointestinal",
+      "is_emergency": false
+    },
+    {
+      "id": "vomiting",
+      "label": "Vomiting",
+      "category": "Gastrointestinal",
+      "is_emergency": false
+    },
+    {
+      "id": "abdominal_pain",
+      "label": "Abdominal / Stomach Pain",
+      "category": "Gastrointestinal",
+      "is_emergency": false
+    },
+    {
+      "id": "diarrhea",
+      "label": "Diarrhea / Loose Stools",
+      "category": "Gastrointestinal",
+      "is_emergency": false
+    },
+    {
+      "id": "acidity",
+      "label": "Acidity & Heartburn",
+      "category": "Gastrointestinal",
+      "is_emergency": false
+    },
+    {
+      "id": "yellow_skin",
+      "label": "Yellow Skin / Eyes (Jaundice)",
+      "category": "Gastrointestinal",
+      "is_emergency": false
+    },
+    {
+      "id": "dark_urine",
+      "label": "Dark / Amber-Colored Urine",
+      "category": "Gastrointestinal",
+      "is_emergency": false
+    },
+    {
+      "id": "loss_of_appetite",
+      "label": "Loss of Appetite",
+      "category": "Gastrointestinal",
+      "is_emergency": false
+    },
+    {
+      "id": "headache",
+      "label": "Headache",
+      "category": "Neurological",
+      "is_emergency": false
+    },
+    {
+      "id": "dizziness",
+      "label": "Dizziness / Lightheadedness",
+      "category": "Neurological",
+      "is_emergency": false
+    },
+    {
+      "id": "blurred_vision",
+      "label": "Blurred / Dimmed Vision",
+      "category": "Neurological",
+      "is_emergency": false
+    },
+    {
+      "id": "stiff_neck",
+      "label": "Stiff Neck / Neck Rigidity",
+      "category": "Neurological",
+      "is_emergency": true
+    },
+    {
+      "id": "confusion",
+      "label": "Confusion / Disorientation",
+      "category": "Neurological",
+      "is_emergency": true
+    },
+    {
+      "id": "excessive_thirst",
+      "label": "Excessive Thirst",
+      "category": "Metabolic & Urinary",
+      "is_emergency": false
+    },
+    {
+      "id": "frequent_urination",
+      "label": "Frequent Urination",
+      "category": "Metabolic & Urinary",
+      "is_emergency": false
+    },
+    {
+      "id": "burning_urination",
+      "label": "Burning Urination",
+      "category": "Metabolic & Urinary",
+      "is_emergency": false
+    },
+    {
+      "id": "high_blood_pressure",
+      "label": "High Blood Pressure",
+      "category": "Metabolic & Urinary",
+      "is_emergency": false
+    },
+    {
+      "id": "joint_pain",
+      "label": "Joint Pain & Stiffness",
+      "category": "Musculoskeletal",
+      "is_emergency": false
+    },
+    {
+      "id": "swollen_joints",
+      "label": "Swollen Joints",
+      "category": "Musculoskeletal",
+      "is_emergency": false
+    },
+    {
+      "id": "muscle_weakness",
+      "label": "Muscle Weakness",
+      "category": "Musculoskeletal",
+      "is_emergency": false
+    },
+    {
+      "id": "skin_rash",
+      "label": "Skin Rash",
+      "category": "Dermatology",
+      "is_emergency": false
+    },
+    {
+      "id": "itching",
+      "label": "Severe Skin Itching",
+      "category": "Dermatology",
+      "is_emergency": false
+    }
+  ],
+  "disease_profiles": {
+    "Acute Bronchitis": {
+      "specialist": "Pulmonologist / Chest Specialist",
+      "description": "Inflammation of the bronchial airways commonly following a viral respiratory illness, causing cough, mucus, and chest tightness.",
+      "core_symptoms": ["cough", "sore_throat", "fatigue", "chest_pain"],
+      "secondary_symptoms": ["fever", "shortness_of_breath", "body_ache"],
+      "precautions": [
+        "Rest adequately and avoid cold drafts",
+        "Drink warm fluids and herbal teas",
+        "Use warm saline steam inhalation twice daily",
+        "Avoid exposure to cigarette smoke and atmospheric pollutants",
+        "Consult a physician if cough persists beyond 10 days"
+      ]
+    },
+    "Pneumonia": {
+      "specialist": "Pulmonologist / Critical Care Specialist",
+      "description": "Acute infection of the lung parenchyma causing alveolar fluid accumulation, characterized by high fever, severe chills, persistent productive cough, and breathing difficulty.",
+      "core_symptoms": ["high_fever", "chills", "cough", "chest_pain", "shortness_of_breath"],
+      "secondary_symptoms": ["fatigue", "sweating", "body_ache"],
+      "precautions": [
+        "Seek immediate clinical evaluation with chest X-ray",
+        "Monitor blood oxygen saturation with pulse oximeter",
+        "Maintain strict oral hydration with electrolytes",
+        "Complete any doctor-prescribed antimicrobial regimen",
+        "Do not delay seeking emergency care if breathlessness worsens"
+      ]
+    },
+    "Common Cold": {
+      "specialist": "General Physician / ENT Specialist",
+      "description": "Mild, self-limiting viral infection of the nasal mucosa and upper respiratory tract causing congestion, sneezing, and runny nose.",
+      "core_symptoms": ["runny_nose", "sneezing", "sore_throat", "cough"],
+      "secondary_symptoms": ["headache", "fatigue", "fever"],
+      "precautions": [
+        "Get plenty of rest and sleep",
+        "Gargle with warm salt water for throat relief",
+        "Stay hydrated with warm water, broths, and soups",
+        "Practice frequent hand washing to prevent transmission",
+        "Use saline nasal drops for nasal congestion"
+      ]
+    },
+    "Malaria": {
+      "specialist": "Infectious Disease Specialist / Physician",
+      "description": "Mosquito-borne parasitic infection characterized by paroxysmal high fever cycles, shaking chills, profuse sweating, and generalized aches.",
+      "core_symptoms": ["high_fever", "chills", "sweating", "headache"],
+      "secondary_symptoms": ["nausea", "vomiting", "body_ache", "fatigue"],
+      "precautions": [
+        "Obtain immediate peripheral blood smear / rapid antigen test",
+        "Take antimalarial medications strictly under medical prescription",
+        "Use mosquito repellent and bed nets consistently",
+        "Maintain high fluid and electrolyte intake",
+        "Rest completely until fever resolves"
+      ]
+    },
+    "Dengue Fever": {
+      "specialist": "Infectious Disease Specialist / Physician",
+      "description": "Acute mosquito-borne arboviral illness causing sudden onset high fever, intense retro-orbital headache, severe joint/muscle pain, and characteristic skin rash.",
+      "core_symptoms": ["high_fever", "joint_pain", "headache", "body_ache", "skin_rash"],
+      "secondary_symptoms": ["nausea", "vomiting", "fatigue"],
+      "precautions": [
+        "Monitor platelet counts daily under medical supervision",
+        "Avoid aspirin and NSAIDs due to bleeding risks",
+        "Maintain aggressive oral hydration with ORS and fresh fluids",
+        "Watch for warning signs like persistent vomiting or bleeding",
+        "Rest in mosquito-screened quarters"
+      ]
+    },
+    "Typhoid Fever": {
+      "specialist": "Gastroenterologist / General Physician",
+      "description": "Systemic bacterial infection caused by Salmonella typhi, presenting with prolonged stepwise fever, abdominal discomfort, headache, and bowel irregularities.",
+      "core_symptoms": ["high_fever", "abdominal_pain", "headache", "fatigue", "loss_of_appetite"],
+      "secondary_symptoms": ["diarrhea", "nausea", "body_ache"],
+      "precautions": [
+        "Consume only boiled or purified drinking water",
+        "Eat easily digestible, freshly cooked bland meals",
+        "Complete full course of antibiotics prescribed by physician",
+        "Practice rigorous hand hygiene before handling food",
+        "Consult physician for blood culture or serological testing"
+      ]
+    },
+    "Gastroenteritis (Food Poisoning)": {
+      "specialist": "Gastroenterologist",
+      "description": "Acute inflammation of the gastrointestinal tract caused by foodborne bacteria, viruses, or toxins, resulting in watery diarrhea, nausea, vomiting, and abdominal cramps.",
+      "core_symptoms": ["abdominal_pain", "diarrhea", "vomiting", "nausea"],
+      "secondary_symptoms": ["fever", "fatigue", "loss_of_appetite"],
+      "precautions": [
+        "Sip Oral Rehydration Solution (ORS) continuously to prevent dehydration",
+        "Follow a gentle diet (bananas, rice, applesauce, toast)",
+        "Avoid dairy products, caffeine, alcohol, and oily foods",
+        "Wash hands thoroughly with soap before food preparation",
+        "Seek medical care if vomiting persists or blood appears in stools"
+      ]
+    },
+    "Acid Reflux (GERD)": {
+      "specialist": "Gastroenterologist",
+      "description": "Digestive disease where stomach acid repeatedly flows back into the food pipe, irritating the esophageal lining and causing heartburn and upper abdominal discomfort.",
+      "core_symptoms": ["acidity", "chest_pain", "nausea"],
+      "secondary_symptoms": ["sore_throat", "abdominal_pain"],
+      "precautions": [
+        "Avoid lying down within 3 hours after eating meals",
+        "Elevate head of bed by 6 inches during sleep",
+        "Limit acidic, spicy, fried foods, caffeine, and chocolate",
+        "Eat smaller, more frequent meals rather than large dinners",
+        "Maintain healthy weight and avoid tight-fitting garments"
+      ]
+    },
+    "Hypertension (High BP)": {
+      "specialist": "Cardiologist",
+      "description": "Long-term cardiovascular condition where systemic arterial pressure is chronically elevated, often presenting with morning headaches, dizziness, and fatigue.",
+      "core_symptoms": ["high_blood_pressure", "headache", "dizziness"],
+      "secondary_symptoms": ["blurred_vision", "fatigue", "chest_pain"],
+      "precautions": [
+        "Restrict daily dietary sodium (salt) intake",
+        "Engage in 30 minutes of moderate aerobic exercise daily",
+        "Avoid smoking, alcohol, and excessive psychological stress",
+        "Record blood pressure readings twice daily in a home log",
+        "Take prescribed antihypertensive medications consistently"
+      ]
+    },
+    "Type 2 Diabetes Mellitus": {
+      "specialist": "Endocrinologist / Diabetologist",
+      "description": "Chronic metabolic disorder marked by persistent hyperglycemia resulting from progressive insulin resistance and impaired insulin secretion.",
+      "core_symptoms": ["excessive_thirst", "frequent_urination", "fatigue"],
+      "secondary_symptoms": ["blurred_vision", "itching", "loss_of_appetite"],
+      "precautions": [
+        "Monitor fasting and post-meal blood glucose regularly",
+        "Strictly limit refined carbohydrates, sugars, and sweetened beverages",
+        "Incorporate daily physical activity to improve insulin sensitivity",
+        "Inspect feet daily for unnoticed cuts, blisters, or sores",
+        "Schedule regular HbA1c, renal, and retinal checkups"
+      ]
+    },
+    "Jaundice (Hepatitis)": {
+      "specialist": "Hepatologist / Gastroenterologist",
+      "description": "Clinical manifestation of liver dysfunction characterized by hyperbilirubinemia, leading to yellowish discoloration of skin and eyes, dark urine, and fatigue.",
+      "core_symptoms": ["yellow_skin", "dark_urine", "fatigue", "loss_of_appetite"],
+      "secondary_symptoms": ["abdominal_pain", "nausea", "vomiting", "itching"],
+      "precautions": [
+        "Undergo Liver Function Tests (LFT) and viral hepatitis screening",
+        "Strictly abstain from all alcoholic beverages and hepatotoxic drugs",
+        "Consume a clean, low-fat, nutrient-dense diet with ample boiled water",
+        "Ensure complete bed rest during the acute symptomatic phase",
+        "Avoid unpurified water and roadside food vendors"
+      ]
+    },
+    "Migraine": {
+      "specialist": "Neurologist",
+      "description": "Primary headache disorder marked by recurrent moderate-to-severe throbbing unilateral head pain, commonly accompanied by sensory sensitivity, nausea, and dizziness.",
+      "core_symptoms": ["headache", "nausea", "dizziness"],
+      "secondary_symptoms": ["blurred_vision", "fatigue"],
+      "precautions": [
+        "Rest in a dark, quiet, temperature-controlled room during attacks",
+        "Identify and avoid individual triggers like caffeine or sensory overload",
+        "Apply a cold compress to the forehead or neck",
+        "Stay consistently hydrated throughout the day",
+        "Maintain regular sleep and meal schedules"
+      ]
+    },
+    "Osteoarthritis": {
+      "specialist": "Orthopedic Surgeon / Rheumatologist",
+      "description": "Degenerative joint disease resulting from progressive breakdown of joint cartilage and underlying bone, causing chronic pain, stiffness, and reduced mobility.",
+      "core_symptoms": ["joint_pain", "swollen_joints", "muscle_weakness"],
+      "secondary_symptoms": ["body_ache", "fatigue"],
+      "precautions": [
+        "Engage in low-impact joint-friendly exercises like swimming or walking",
+        "Maintain optimal body weight to reduce joint load bearing",
+        "Use warm compresses for stiffness and cold packs for swelling",
+        "Use supportive walking aids or braces when recommended",
+        "Avoid prolonged static standing or high-impact activities"
+      ]
+    },
+    "Allergic Rhinitis": {
+      "specialist": "Allergist / ENT Specialist",
+      "description": "Allergic inflammatory condition of the nasal mucous membranes triggered by environmental allergens like pollen, dust mites, or animal dander.",
+      "core_symptoms": ["sneezing", "runny_nose", "itching"],
+      "secondary_symptoms": ["sore_throat", "headache", "fatigue"],
+      "precautions": [
+        "Minimize exposure to known environmental allergens and pollen",
+        "Keep windows closed during peak pollen count hours",
+        "Use HEPA air purifiers in sleeping quarters",
+        "Perform regular saline nasal rinses",
+        "Wash bedding frequently in hot water to eliminate dust mites"
+      ]
+    },
+    "Urinary Tract Infection (UTI)": {
+      "specialist": "Urologist / Nephrologist",
+      "description": "Bacterial infection affecting the urinary tract, commonly presenting with burning urination, urinary frequency, and lower abdominal discomfort.",
+      "core_symptoms": ["burning_urination", "frequent_urination", "abdominal_pain"],
+      "secondary_symptoms": ["fever", "dark_urine", "fatigue"],
+      "precautions": [
+        "Drink plenty of water (2.5 - 3 liters daily) to flush urinary passages",
+        "Urinate promptly when the urge arises without holding",
+        "Consult a physician for urine routine and culture sensitivity testing",
+        "Complete full course of antibiotics if prescribed by doctor",
+        "Avoid harsh feminine hygiene sprays or scented soaps"
+      ]
+    },
+    "Asthma": {
+      "specialist": "Pulmonologist",
+      "description": "Chronic inflammatory airway disorder characterized by episodic airway hyperresponsiveness, causing wheezing, breathlessness, chest tightness, and coughing.",
+      "core_symptoms": ["wheezing", "shortness_of_breath", "cough", "chest_pain"],
+      "secondary_symptoms": ["fatigue"],
+      "precautions": [
+        "Keep physician-prescribed rescue inhaler accessible at all times",
+        "Identify and avoid personal triggers (dust, cold air, smoke, pollen)",
+        "Monitor peak expiratory flow if instructed by your doctor",
+        "Take daily preventative controller medications as prescribed",
+        "Seek immediate emergency care if breathing distress fails to respond to inhaler"
+      ]
+    }
+  }
+}
+

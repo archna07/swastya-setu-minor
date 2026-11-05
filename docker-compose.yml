@@ -1,0 +1,85 @@
+version: '3.8'
+
+services:
+  # MySQL 8.0 Database Service
+  db:
+    image: mysql:8.0
+    container_name: swastya_db
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:-RootPassSecure2026!}
+      MYSQL_DATABASE: ${DB_NAME:-swastya_setu}
+      MYSQL_USER: ${DB_USER:-swastya_user}
+      MYSQL_PASSWORD: ${DB_PASS:-SwastyaSecurePass2026!}
+    command: >
+      --default-authentication-plugin=mysql_native_password
+      --character-set-server=utf8mb4
+      --collation-server=utf8mb4_unicode_ci
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./database/schema.sql:/docker-entrypoint-initdb.d/01_schema.sql:ro
+    ports:
+      - "127.0.0.1:3306:3306"
+    networks:
+      - swastya_network
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Python Flask AI Disease Prediction Microservice
+  ai_service:
+    build:
+      context: ./ai_service
+      dockerfile: Dockerfile
+    container_name: swastya_ai_service
+    restart: unless-stopped
+    environment:
+      - PORT=5000
+    networks:
+      - swastya_network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/health"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+
+  # PHP 8.2 Apache Web Application
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: swastya_web
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+      ai_service:
+        condition: service_healthy
+    environment:
+      APP_ENV: ${APP_ENV:-production}
+      APP_DEBUG: ${APP_DEBUG:-false}
+      DB_HOST: db
+      DB_PORT: 3306
+      DB_NAME: ${DB_NAME:-swastya_setu}
+      DB_USER: ${DB_USER:-swastya_user}
+      DB_PASS: ${DB_PASS:-SwastyaSecurePass2026!}
+      AI_SERVICE_URL: http://ai_service:5000
+    ports:
+      - "80:80"
+    volumes:
+      - prescription_uploads:/var/www/html/uploads/prescriptions
+    networks:
+      - swastya_network
+
+volumes:
+  mysql_data:
+    driver: local
+  prescription_uploads:
+    driver: local
+
+networks:
+  swastya_network:
+    driver: bridge
+

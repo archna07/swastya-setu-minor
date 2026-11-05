@@ -1,0 +1,37 @@
+# Environment and Secrets
+.env
+*.env.local
+*.env.*.local
+
+# Backups and Logs
+backups/
+backups_*/
+*.bak
+*.log
+*.sql.gz
+
+# Python Artifacts & Cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+env/
+venv/
+.venv/
+
+# Prescription Upload Storage (Preserve directory structure)
+uploads/prescriptions/*
+!uploads/prescriptions/.htaccess
+!uploads/prescriptions/index.html
+
+# IDE & Editor Configurations
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
